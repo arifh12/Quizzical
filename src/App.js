@@ -16,7 +16,7 @@ function App() {
 				const newArr = data.results.map(item => {
 					const question = decode(item.question);
 					const answerChoices = item.incorrect_answers;
-					const correctIndex = Math.floor(Math.random() * answerChoices.length);
+					const correctIndex = Math.floor(Math.random() * (answerChoices.length + 1));
 					answerChoices.splice(correctIndex, 0, item.correct_answer);
 
 					return {
