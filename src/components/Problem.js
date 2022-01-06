@@ -29,7 +29,7 @@ export default function Problem({
 							getClassName(index)
 						}
 						key={index}
-						onClick={() => handleClick(index)}
+						onClick={!isSubmitted && (() => handleClick(index))}
 					>
 						{choice}
 					</li>
